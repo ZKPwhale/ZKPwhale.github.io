@@ -1456,21 +1456,50 @@
 
 <ul>
     
-<li>账号：tafferw319950524c@icloud.com</li>
-<li>密码：Aa558559</li>
+<li>
+  账号：tafferw319950524c@icloud.com
+  <button onclick="copyText('tafferw319950524c@icloud.com')">复制</button>
+</li>
+<li>
+  密码：Aa558559
+  <button onclick="copyText('Aa558559')">复制</button>
+</li>
 
+<li>
+  账号：brittingham.lynd9@icloud.com
+  <button onclick="copyText('brittingham.lynd9@icloud.com')">复制</button>
+</li>
+<li>
+  密码：Aa554556
+  <button onclick="copyText('Aa554556')">复制</button>
+</li>
 
-<li>账号：brittingham.lynd9@icloud.com</li>
-<li>密码：Aa554556</li>
+<li>
+  账号：glenn19970819g@icloud.com
+  <button onclick="copyText('glenn19970819g@icloud.com')">复制</button>
+</li>
+<li>
+  密码：Aa558559
+  <button onclick="copyText('Aa558559')">复制</button>
+</li>
 
-<li>账号：glenn19970819g@icloud.com</li>
-<li>密码：Aa558559</li>
+<li>
+  账号：latishaplathe220b@icloud.com
+  <button onclick="copyText('latishaplathe220b@icloud.com')">复制</button>
+</li>
+<li>
+  密码：Aa554556
+  <button onclick="copyText('Aa554556')">复制</button>
+</li>
 
-<li>账号：latishaplathe220b@icloud.com</li>
-<li>密码：Aa554556</li>
-
-<li>账号：hsubekcappackebub@icloud.com</li>
-<li>密码：Aa554556</li>
+<li>
+  账号：hsubekcappackebub@icloud.com
+  <button onclick="copyText('hsubekcappackebub@icloud.com')">复制</button>
+</li>
+<li>
+  密码：Aa554556
+  <button onclick="copyText('Aa554556')">复制</button>
+</li>
 
 
 
@@ -1522,6 +1551,23 @@
       document.getElementsByClassName("donate-modal")[0].style.display =
         "block";
     }
+
+function copyText(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text);
+    alert('已复制：' + text);
+  } else {
+    // 兼容旧浏览器
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('已复制：' + text);
+  }
+}
+    
     // 切换赞赏码
     function showDonateImg(num) {
       let alipay = "";
